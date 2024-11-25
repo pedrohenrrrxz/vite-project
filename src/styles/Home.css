@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container img {
+    width: 827px;
+    height: 442px;
+    margin-top: 160px;
+    margin-right: 20px;
+}
+
+
+.container .left {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 296px;
+    margin-top: 202px;
+    margin-left: 120px;
+    gap: 24px;
+
+}
+
+.container .left .textos {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 226px;
+    gap: 8px;
+}
+
+.container .left .textos h2 {
+    font-size: 64px;
+    color: #FFFFFF;
+    line-height: 76.8px;
+    height: 154px;
+}
+
+.container .left .textos p {
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 32px;
+    height: 64px;
+}
+
+.container .left button {
+    width: 220px;
+    height: 46px;
+    padding: 12px 24px;
+    background-color: #DB4437;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: white;
+    transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.container .left button:hover {
+    background-color: #C1352E; /* Alteração na cor de fundo */
+    transform: scale(1.05); /* Leve aumento do botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é interativo */
+}
