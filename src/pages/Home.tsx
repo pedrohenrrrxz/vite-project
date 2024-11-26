@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import '../styles/Home.css'
 
 // quando voce faz isso, voce instala a dependencia, mas voce so utiliza se """""" importar, agora vai no tutorial do chatgpt
 

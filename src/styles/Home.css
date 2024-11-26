@@ -4,7 +4,7 @@
 }
 .container img {
     width: 826px;
-    height: 440px;
+    height: 300px;
     margin-top: 160px;
     margin-right: 20px;
 }
@@ -15,12 +15,10 @@
     flex-direction: column;
     width: 480px;
     height: 296px;
-    margin-top: 202px;
+    margin-top: 180px;
     margin-left: 120px;
     gap: 24px;
-
 }
-
 .container .left .textos {
     
     display: flex;
@@ -31,14 +29,14 @@
 }
 
 .container .left .textos h2 {
-    font-size: 64px;
+    font-size: 56px;
     color: #FFFFFF;
     line-height: 76.8px;
     height: 154px;
 }
 
 .container .left .textos p {
-    font-size: 20px;
+    font-size: 15px;
     color: #FFFFFF;
     line-height: 32px;
     height: 64px;
@@ -54,6 +52,7 @@
     font-size: 14px;
     color: white;
     transition: all 0.3s ease; /* Transição suave para mudanças */
+    gap: 8px;
 }
 
 .container .left button:hover {
@@ -61,3 +60,6 @@
     transform: scale(1.05); /* Leve aumento do botão */
     cursor: pointer; /* Muda o cursor para indicar que o botão é interativo */
 }
+.container .left button .google-icon{
+    margin-right: 8px;
+};
