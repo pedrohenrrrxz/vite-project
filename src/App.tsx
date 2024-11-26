@@ -1,5 +1,5 @@
-import '../src/styles/App.css'
-import Home from './pages/Home'
+import "../src/styles/App.css";
+import AppRoutes from "./routes/Routes";
 
 
 function App() {
@@ -7,8 +7,9 @@ function App() {
 
   return (
     <div className="App">
-        <Home />
+        <AppRoutes/>
     </div>
+    
   )
 }
 
