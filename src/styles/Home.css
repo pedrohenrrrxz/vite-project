@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
 }
-
 .container img {
     width: 826px;
     height: 440px;
@@ -23,6 +22,7 @@
 }
 
 .container .left .textos {
+    
     display: flex;
     flex-direction: column;
     width: 480px;

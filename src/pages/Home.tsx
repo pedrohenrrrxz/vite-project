@@ -1,5 +1,9 @@
 import React from "react";
-import '../styles/Home.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+
+// quando voce faz isso, voce instala a dependencia, mas voce so utiliza se """""" importar, agora vai no tutorial do chatgpt
+
 
 const Home : React.FC =() => {
     return (
@@ -16,7 +20,10 @@ const Home : React.FC =() => {
                         </div>
                 </div>
 
-                <button><i></i>Criar conta com Google</button>
+                <button>
+                <FontAwesomeIcon icon={faGoogle} className="google-icon" />
+                    Criar conta com Google
+                </button>
             </div>
                 <img src="/imagem.png" alt="" />
         
