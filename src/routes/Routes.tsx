@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Registrar from "../pages/Registrar";
+import Registrar2 from "../pages/Registrar2";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Registro" element={<Registrar />} />
+        <Route path="/Registrar2" element={<Registrar2/>}/>
       </Routes>
     </BrowserRouter>
   );

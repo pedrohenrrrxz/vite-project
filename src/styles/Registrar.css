@@ -1,6 +1,155 @@
 .content {
-    width: Fixed (540px)px;
-    height: Hug (443px)px;
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 443px;
     margin-top: 96px;
     margin-left: 429.5px;
+    justify-items: center;
+    font-family: 'Roboto', sans-serif;
+
+
+    gap: 24px;
 }
+
+.header {
+    align-items: center;
+    width: 540px;
+    height: 90px;
+    padding: 0px 24px;
+}
+
+.content .header .title {
+    width: 492px;
+    height: 90px;
+    color: white;
+    gap: 8px;
+}
+
+.content .header .label {
+    width: 117px;
+    height: 27px;
+}
+
+.header .title p {
+    width: 492px;
+    height: 52px;
+    top: 38px;
+    left: 24px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #A9A9B2;
+}
+
+.content .label p {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: #A9A9B2;
+
+}
+
+.content .steps {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 27px;
+    border-radius: 2px;
+    padding: 24px;
+    color: #A9A9B2; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.content .steps .quadrados {
+    display: flex; /* Organiza os itens em linha */
+    justify-content: space-between; /* Espaça os quadrados uniformemente */
+    align-items: center; /* Alinha os quadrados verticalmente ao centro */
+    gap: 8px; /* Espaçamento entre os quadrados */
+    width: 100%; /* Ocupa toda a largura do container pai */
+    height: 8px; /* Altura total dos quadrados */
+}
+
+.content .steps .step {
+    flex: 1; /* Faz com que cada quadrado ocupe uma proporção igual dentro do container */
+    height: 4px; /* Define a altura de cada barra */
+    background-color: #323238; /* Cor padrão dos quadrados */
+    border-radius: 2px; /* Arredonda levemente os cantos */
+}
+
+.content .steps .step.active {
+    background-color: #FFFFFF; /* Cor do quadrado ativo */
+}
+
+
+.content .modal {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 278px;
+    padding: 24px;
+    gap: 16px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #323238; /* Define a borda em todos os lados */
+    opacity: 1; /* Certifique-se de que esteja visível */
+    background-color: #202024; /* Cor de fundo */
+}
+
+;
+
+.content .modal .inputbox {
+    display: flex;
+    flex-direction: column;
+    width: 492px;
+    height: 76px;
+    gap: 8px;
+    margin: top 10px; ;
+}
+
+.content .modal .inputbox p {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 22px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: #E1E1E6;
+    border-radius: 6%;
+    line-height: 22,4px;
+    
+
+}
+
+.content .modal .inputbox input {
+    width: 492px;
+    height: 46px;
+    padding: 12px 16px;
+    gap: 8px;
+    border: none;
+    background-color: #121214;
+    border-radius: 6px;
+    bottom: 12px;
+    left:16px;
+}
+.content .modal .inputbox button {
+width: 492px;
+height: 46px;
+padding: 12px 16px;
+gap: 8px;
+border-radius: 6px;
+opacity: 0px;
+background-color: #00875F;
+color: white;
+border-radius: 6px;
+
+};
