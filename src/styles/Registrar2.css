@@ -110,13 +110,13 @@
 }
 
 .content .modal .inputBox {
+    border:1px solid rgba(128, 128, 128, 0.26);
     display: flex;
     align-items: center;
     width: 492px;
     height: 70px;
     padding: 16px 24px;
     border-radius: 6px;
-    border: 1px;
     justify-content: space-between;
 }
 

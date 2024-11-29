@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate(); // Hook para navegação
 
   const handleNavigate = () => {
-    navigate("/Registro"); // Redireciona para a rota /Registro
+    navigate("/Registrar"); // Redireciona para a rota /Registro
   };
 
   return (

@@ -2,8 +2,15 @@ import React from "react"
 import "../styles/Registrar2.css"; 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 const Registrar2: React.FC = () => {
+        const navigate = useNavigate(); // Hook para navegação
+      
+        const handleNavigate = () => {
+          navigate("/Registrar2"); // Redireciona para a rota /Registrar2
+        };
+      
     return (
         <div className="content">
         <div className="header">
@@ -30,6 +37,10 @@ const Registrar2: React.FC = () => {
               <p>Google Agenda</p>
               <button>Conectar<FontAwesomeIcon icon={faArrowRight}/></button>
            </div>
+           <button className="next-button" onClick={handleNavigate}>
+          Próximo passo
+          <FontAwesomeIcon icon={faArrowRight}/>
+        </button>
         </div>
     </div>
     );
