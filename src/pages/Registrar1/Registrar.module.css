@@ -1,0 +1,144 @@
+/* Estilização geral do content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 540px;
+  height: 440px;
+  margin-top: 96px;
+  margin-left: 429.5px;
+  font-family: "Roboto", sans-serif;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 540px;
+  height: 90px;
+  padding: 0px 24px;
+}
+
+.title {
+  width: 492px;
+  height: 90px;
+  color: #fff;
+}
+
+.title p {
+  width: 492px;
+  height: 52px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  text-align: left;
+  color: #a9a9b2;
+}
+
+/* Estilização do progresso (steps) */
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Para ocupar toda a largura disponível */
+  padding: 0 24px; /* Padding lateral de 24px */
+  height: 16px;
+  border-radius: 2px;
+  color: #a9a9b2;
+  font-family: "Roboto", sans-serif;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 18px;
+  gap: 8px;
+}
+
+.quadrados {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 6px;
+}
+
+.step {
+  flex: 1;
+  height: 4px;
+  background-color: #323238;
+  border-radius: 2px;
+}
+
+.step.active {
+  background-color: #ffffff;
+}
+
+/* Estilização do modal */
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  height: 278px;
+  padding: 24px;
+  border-radius: 6px;
+  border: 1px solid #323238;
+  background-color: #202024;
+}
+
+/* Estilização dos campos input */
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  width: 492px;
+  height: 76px;
+  margin: 0;
+}
+
+.inputbox p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #e1e1e6;
+}
+
+.inputbox input {
+  width: 492px;
+  height: 46px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #121214;
+  border-radius: 6px;
+  color: #e1e1e6;
+  font-family: "Roboto", sans-serif;
+}
+
+.nextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 492px;
+  height: 44px;
+  padding: 10px 14px;
+  gap: 8px;
+  background-color: #00875f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.nextButton:hover {
+  background-color: #00a372;
+}

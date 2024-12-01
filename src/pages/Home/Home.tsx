@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
-import '../styles/Home.css';
+import './Home.css';
 
 const Home: React.FC = () => {
   const navigate = useNavigate(); // Hook para navegação

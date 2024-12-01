@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121214;
+  color: #E1E1E6;
+}
+
+/* Content Container */
+.content3 {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  margin: 96px auto;
+  color: #A9A9B2;
+  gap: 24px;
+}
+
+/* Header */
+.header3 {
+  text-align: left;
+  padding: 0 24px;
+}
+
+.header3 .title3 h2 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.header3 .title3 p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Steps Section */
+.steps3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px;
+}
+
+.steps3 .text3 h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #A9A9B2;
+}
+
+.steps3 .quadrados3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.steps3 .step3 {
+  flex: 1;
+  height: 4px;
+  background-color: #323238;
+  border-radius: 2px;
+}
+
+.steps3 .step3.active {
+  background-color: #FFFFFF;
+}
+
+/* Modal Section */
+.modal3 {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  height: 544px;
+  border-radius: 6px;
+  border: 1px solid #323238;
+  padding: 24px;
+  gap: 16px;
+  background-color: #202024;
+}
+
+.frame3 {
+  width: 492px;
+  height: 434px;
+  border-radius: 6px;
+  border: 1px solid #323238;
+}
+
+/* Input Box */
+.inputbox3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 492px;
+  height: 62px;
+  border-bottom: 1px solid #323238;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.weekday3 {
+  display: flex;
+  flex-direction: row;
+  width: 135px;
+  height: 26px;
+  gap: 12px;
+}
+
+.icone-checkbox3 {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  padding: 4px;
+  gap: 10px;
+  color: #00B37E;
+}
+
+.day3 {
+  width: 99px;
+  height: 26px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  text-align: left;
+}
+
+.timerange3 {
+  width: 168px;
+  height: 38px;
+  gap: 8px;
+}
+
+.inicio3, .fim3 {
+  width: 80px;
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  background-color: #121214;
+}
+
+/* Final Button */
+.next-button3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #00875F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.next-button3:hover {
+  background-color: #006644;
+}

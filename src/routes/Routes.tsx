@@ -2,10 +2,13 @@
 
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Registrar from "../pages/Registrar";
-import Registrar2 from "../pages/Registrar2";
-import Registrar4 from "../pages/Registrar4";
+
+import Registrar from "../pages/Registrar1/Registrar";
+import Registrar2 from "../pages/Registrar2/Registrar2";
+import Registrar3 from "../pages/Registrar3/Registrar3";
+import Registrar4 from "../pages/Registrar4/Registrar4";
+import Home from "../pages/Home/Home";
+
 
 const AppRoutes: React.FC = () => {
   return (
@@ -14,6 +17,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Registrar" element={<Registrar />} />
         <Route path="/Registrar2" element={<Registrar2/>}/>
+        <Route path="/Registrar3" element={<Registrar3/>}/>
         <Route path="/Registrar4" element={<Registrar4/>}/>
       </Routes>
     </BrowserRouter>
