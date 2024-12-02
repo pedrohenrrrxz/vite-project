@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -72,6 +73,12 @@ const RightSection = styled.div`
 
 const Home: React.FC = () => {
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/Registrar")
+  }
+
   return (
     <Container>
 
@@ -80,7 +87,7 @@ const Home: React.FC = () => {
         <p>
           Conecte seu calendário e permita que as pessoas marquem agendamentos no seu tempo livre.
         </p>
-        <button>
+        <button onClick={handleNavigate}>
           Criar Conta Com o Google
         </button>
       </LeftSection>

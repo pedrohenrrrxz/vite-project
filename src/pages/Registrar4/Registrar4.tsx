@@ -1,76 +1,185 @@
-import React, { useState } from "react";
-import "./Registrar4.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { useState } from "react";
+import Steps from "../../components/Steps";
+import Header from "../../components/Header";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Registrar4: React.FC = () => {
-  const navigate = useNavigate()
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121214;
+  padding: 20px;
+  box-sizing: border-box;
+`;
 
-  const handleNavigate = () => {
-    navigate("/calendar");
+const Modal = styled.div`
+  width: 540px;
+  max-width: 100%;
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #29292e;
+  background-color: #202024; /* Cor corrigida */
+`;
+
+const Person = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+`;
+
+const Label = styled.label`
+  font-size: 14px;
+  color: #e1e1e6;
+`;
+
+const Frame = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+`;
+
+const ImagePreview = styled.img`
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
+const ButtonSelect = styled.button`
+  background-color: #29292e;
+  color: #fff;
+  border: 1px solid #323238;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #3e3e42;
   }
+`;
 
-  const [profileImage, setProfileImage] = useState<string>("/fotodeperfil.png");
+const TextArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+`;
+
+const Input = styled.textarea`
+  width: 100%;
+  height: 120px;
+  padding: 8px;
+  background-color: #121214;
+  color: #fff;
+  border: 1px solid #29292e;
+  border-radius: 6px;
+  resize: none;
+`;
+
+
+const NextButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 492px;
+  height: 44px;
+  padding: 10px 14px;
+  gap: 8px;
+  background-color: #00875f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #00a372;
+  }
+`;
+
+const RegistrationStep4: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [aboutYou, setAboutYou] = useState("");
+  const navigate = useNavigate();
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-      const imageURL = URL.createObjectURL(file);
-      setProfileImage(imageURL);
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setSelectedImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
-  return (
-    <div className="content4">
-      <div className="header4">
-        <div className="title4">
-          <h2>Defina sua disponibilidade</h2>
-          <p>Por último, uma breve descrição e uma foto de perfil.</p>
-        </div>
-      </div>
-      <div className="steps4">
-        <div className="text4">
-          <h4>Passo 4 de 4</h4>
-        </div>
-        <div className="quadrados4">
-          <div className="step4"></div>
-          <div className="step4"></div>
-          <div className="step4"></div>
-          <div className="step4 active"></div>
-        </div>
-      </div>
+  const handleNavigate = () => {
+    navigate("/calendar");
+  };
 
-      
-      <div className="modal4">
-        <div className="inputbox column4">
-          <p>Foto de Perfil</p>
-          <div className="frame4">
-            <img src={profileImage} alt="Foto selecionada" />
-            <button>
-              <label htmlFor="file-upload">Selecionar Foto</label>
-            </button>
+  return (
+    <Container>
+      <Header
+        title="Bem-vindo ao Ignite Call!"
+        description="Precisamos de algumas informações para criar seu perfil."
+      />
+      <Steps currentStep={4} totalSteps={4} />
+
+      <Modal>
+        <Person>
+          <Label htmlFor="imageInput">Foto de Perfil</Label>
+          <Frame>
+            <ImagePreview
+              src={selectedImage || "/fotodeperfil.png"}
+              alt="Foto de perfil"
+            />
+            <ButtonSelect
+              onClick={() => document.getElementById("imageInput")?.click()}
+            >
+              Selecionar Foto
+            </ButtonSelect>
             <input
-              id="file-upload"
+              id="imageInput"
               type="file"
               accept="image/*"
-              style={{ display: "none" }}
               onChange={handleImageChange}
+              style={{ display: "none" }}
             />
-          </div>
-        </div>
-        <div className="inputbox4">
-          <label htmlFor="about4">Sobre você</label>
-          <textarea id="about4"></textarea>
-          <p>Fale um pouco sobre você. Isto será exibido em sua página pessoal.</p>
-        </div>
-        <button className="next-button4" onClick={handleNavigate}>
-          Finalizar
+          </Frame>
+        </Person>
+
+        <TextArea>
+          <Label htmlFor="aboutYou">Sobre você</Label>
+          <Input
+            id="aboutYou"
+            placeholder="Fale um pouco sobre você..."
+            value={aboutYou}
+            onChange={(e) => setAboutYou(e.target.value)}
+          />
+        </TextArea>
+        <NextButton onClick={handleNavigate}>
+          Próximo passo
           <FontAwesomeIcon icon={faArrowRight} />
-        </button>
-      </div>
-    </div>
+        </NextButton>
+      </Modal>
+    </Container>
   );
 };
 
-export default Registrar4;
+export default RegistrationStep4;
