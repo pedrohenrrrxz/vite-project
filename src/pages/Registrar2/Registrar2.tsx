@@ -42,7 +42,6 @@ const Registrar2: React.FC = () => {
                 </button>
                 
             </div>
-            <button>ACESSAR</button>
         </div>
     );
 };
