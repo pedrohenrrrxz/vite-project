@@ -9,7 +9,7 @@ import Steps from "../../components/Steps";
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   width: 540px;
   height: 440px;
   margin-top: 96px;

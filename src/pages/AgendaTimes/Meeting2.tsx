@@ -7,7 +7,6 @@ const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #121212;
 `;
 
 const Container = styled.div`

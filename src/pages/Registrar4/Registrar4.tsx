@@ -20,7 +20,6 @@ const Container = styled.div`
 
 const Modal = styled.div`
   width: 540px;
-  max-width: 100%;
   padding: 24px;
   gap: 16px;
   display: flex;

@@ -10,13 +10,12 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 540px;
   height: 709px;
   margin-top: 96px;
   margin-left: 429.5px;
   padding: 24px;
-  gap: 16px;
+  gap: 24px;
 `;
 
 const Modal = styled.div`
