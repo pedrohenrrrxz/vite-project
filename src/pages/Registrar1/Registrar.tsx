@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +27,7 @@ const Modal = styled.div`
   border-radius: 6px;
   border: 1px solid #323238;
   background-color: #202024;
+  gap: 16px;
 `;
 
 const InputBox = styled.div`
@@ -34,7 +35,7 @@ const InputBox = styled.div`
   flex-direction: column;
   width: 492px;
   height: 76px;
-  margin: 0;
+  gap: 4px;
 
   p {
     font-family: Roboto;
@@ -53,6 +54,12 @@ const InputBox = styled.div`
     border-radius: 6px;
     color: #e1e1e6;
     font-family: "Roboto", sans-serif;
+  }
+
+  span {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
   }
 `;
 
@@ -82,8 +89,45 @@ const NextButton = styled.button`
 const Registrar: React.FC = () => {
   const navigate = useNavigate();
 
+  // Estado para armazenar os valores dos inputs
+  const [username, setUsername] = useState("");
+  const [fullName, setFullName] = useState("");
+
+  // Estado para armazenar mensagens de erro
+  const [errors, setErrors] = useState({
+    username: "",
+    fullName: "",
+  });
+
+  // Função de validação
+  const validate = () => {
+    let isValid = true;
+    let errorMessages = {
+      username: "",
+      fullName: "",
+    };
+
+    if (!username) {
+      errorMessages.username = "Nome de usuário é obrigatório!";
+      isValid = false;
+    } else if (!/^[a-zA-Z0-9]+(?:[._][a-zA-Z0-9]+)*$/.test(username)) {
+      errorMessages.username = "Nome de usuário inválido!";
+      isValid = false;
+    }
+
+    if (!fullName) {
+      errorMessages.fullName = "Nome completo é obrigatório!";
+      isValid = false;
+    }
+
+    setErrors(errorMessages);
+    return isValid;
+  };
+
   const handleNavigate = () => {
-    navigate("/Registrar2");
+    if (validate()) {
+      navigate("/Registrar2");
+    }
   };
 
   return (
@@ -96,11 +140,23 @@ const Registrar: React.FC = () => {
       <Modal>
         <InputBox>
           <p>Nome de usuário</p>
-          <input type="text" placeholder="cal.com/joseph" />
+          <input
+            type="text"
+            placeholder="cal.com/joseph"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          {errors.username && <span>{errors.username}</span>}
         </InputBox>
         <InputBox>
           <p>Nome completo</p>
-          <input type="text" placeholder="Joseph Oliveira" />
+          <input
+            type="text"
+            placeholder="Joseph Oliveira"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          {errors.fullName && <span>{errors.fullName}</span>}
         </InputBox>
         <NextButton onClick={handleNavigate}>
           Próximo passo
