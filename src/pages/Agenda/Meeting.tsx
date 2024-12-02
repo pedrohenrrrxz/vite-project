@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Agenda from "../../components/Calendar";
 
-
 const PageWrapper = styled.div`
   display: flex;
   justify-content: center;

@@ -1,23 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { FcGoogle } from "react-icons/fc"; // Importa o ícone do Google
+import { FaGoogle } from "react-icons/fa"; // Importa o ícone do Google
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
-  padding: 0 2rem;
-  background-color: #121214;
+  height: 100vh;  
 `;
 
 const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   width: 480px;
   height: 154px;
+  margin-bottom: 100px;
   margin-left: 120px;
   gap: 24px;
 
@@ -94,7 +92,7 @@ const Home: React.FC = () => {
           Conecte seu calendário e permita que as pessoas marquem agendamentos no seu tempo livre.
         </p>
         <button onClick={handleNavigate}>
-          <FcGoogle /> Criar Conta Com o Google
+          <FaGoogle />Criar Conta Google
         </button>
       </LeftSection>
       <RightSection>
