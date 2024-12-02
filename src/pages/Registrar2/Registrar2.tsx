@@ -76,10 +76,34 @@ const InputBox = styled.div`
   }
 `;
 
+
+const NextButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 492px;
+  height: 44px;
+  padding: 10px 14px;
+  gap: 8px;
+  background-color: #00875f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #00a372;
+  }
+`;
+
 const Registrar2: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNextStep = () => {
+  const handleNavigate = () => {
     navigate("/Registrar3");
   };
 
@@ -98,7 +122,10 @@ const Registrar2: React.FC = () => {
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </InputBox>
-        <Button text="Próximo passo →" onClick={handleNextStep} />
+        <NextButton onClick={handleNavigate}>
+          Próximo passo
+          <FontAwesomeIcon icon={faArrowRight} />
+        </NextButton>
       </Modal>
     </Container>
   );
