@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { FcGoogle } from "react-icons/fc"; // Importa o ícone do Google
 
 const Container = styled.div`
   display: flex;
@@ -35,6 +36,10 @@ const LeftSection = styled.div`
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     width: 220px;
     height: 46px;
     padding: 12px 24px;
@@ -45,12 +50,15 @@ const LeftSection = styled.div`
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    gap: 8px;
     line-height: 22.4px;
     transition: background-color 0.3s;
 
     &:hover {
       background-color: #ae534b;
+    }
+
+    svg {
+      font-size: 18px; /* Define o tamanho do ícone */
     }
   }
 `;
@@ -72,26 +80,23 @@ const RightSection = styled.div`
 `;
 
 const Home: React.FC = () => {
-
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/Registrar")
-  }
+    navigate("/Registrar");
+  };
 
   return (
     <Container>
-
       <LeftSection>
         <h2>Agendamento Descomplicado</h2>
         <p>
           Conecte seu calendário e permita que as pessoas marquem agendamentos no seu tempo livre.
         </p>
         <button onClick={handleNavigate}>
-          Criar Conta Com o Google
+          <FcGoogle /> Criar Conta Com o Google
         </button>
       </LeftSection>
-
       <RightSection>
         <img src="/imagem.png" alt="Ilustração representando organização" />
       </RightSection>

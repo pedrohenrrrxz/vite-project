@@ -9,12 +9,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #121214;
-  padding: 20px;
-  box-sizing: border-box;
+  width: 540px;
+  height: 539px;
+  margin-top: 96px;
+  margin-left: 429.5px;
+  padding: 24px;
+  gap: 24px;
 `;
 
 const Modal = styled.div`

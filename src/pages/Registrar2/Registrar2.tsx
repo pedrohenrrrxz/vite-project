@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../../components/Header";
-import Button from "../../components/Button";
 import Steps from "../../components/Steps";
 
 const Container = styled.div`

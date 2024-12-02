@@ -12,6 +12,7 @@ const StepsContainer = styled.div`
   border-radius: 2px;
   color: #a9a9b2;
   font-family: "Roboto", sans-serif;
+  gap: 8px;
 
   .text {
     display: flex;
